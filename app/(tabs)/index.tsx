@@ -1,0 +1,9 @@
+import { StyleSheet, Text, View } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
+import { SafeAreaView } from 'react-native-safe-area-context';
+
+export default function MapPlaceholder() {
+  return <SafeAreaView style={styles.safe}><View style={styles.map}><View style={styles.marker1}><Ionicons name="business" size={18} color="#FFF" /></View><View style={styles.marker2}><Ionicons name="business" size={18} color="#FFF" /></View><View style={styles.marker3}><Ionicons name="business" size={18} color="#FFF" /></View></View><View style={styles.sheet}><View style={styles.handle} /><Text style={styles.label}>Nearby</Text><Text style={styles.title}>Central Park Restroom</Text><Text style={styles.meta}>0.2 mi · Open now · Accessible</Text></View></SafeAreaView>;
+}
+
+const styles = StyleSheet.create({ safe: { flex: 1, backgroundColor: '#DAE9E1' }, map: { flex: 1, backgroundColor: '#DAE9E1' }, marker1: { position: 'absolute', left: '32%', top: '38%', width: 44, height: 44, borderRadius: 22, backgroundColor: '#215C46', alignItems: 'center', justifyContent: 'center' }, marker2: { position: 'absolute', right: '18%', top: '26%', width: 44, height: 44, borderRadius: 22, backgroundColor: '#215C46', alignItems: 'center', justifyContent: 'center' }, marker3: { position: 'absolute', left: '18%', top: '58%', width: 44, height: 44, borderRadius: 22, backgroundColor: '#215C46', alignItems: 'center', justifyContent: 'center' }, sheet: { position: 'absolute', left: 12, right: 12, bottom: 12, height: 150, backgroundColor: '#FFF', borderRadius: 22, padding: 20 }, handle: { width: 44, height: 5, borderRadius: 3, backgroundColor: '#CBD3CF', alignSelf: 'center', marginBottom: 12 }, label: { color: '#215C46', fontWeight: '700' }, title: { fontSize: 20, fontWeight: '800', color: '#18251F', marginTop: 5 }, meta: { color: '#718078', marginTop: 6 } });
